@@ -119,6 +119,7 @@ function About() {
                   src={data.img}
                   width={16}
                   height={12}
+                  alt="about-img"
                   layout="responsive"
                 />
             </Animate>

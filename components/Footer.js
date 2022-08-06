@@ -16,19 +16,19 @@ function Footer() {
       <div className="footer-wrapper">
         <ul className="footer-links">
           <li className="link">
-            <a href="#">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li className="link">
-            <a href="#">About Us</a>
+            <a href="#about">About Us</a>
+          </li>
+          {/* <li className="link">
+            <a href="#">Latest Gpu&apos;s</a>
+          </li> */}
+          <li className="link">
+            <a href="#service">Mining Services</a>
           </li>
           <li className="link">
-            <a href="#">Latest Gpu's</a>
-          </li>
-          <li className="link">
-            <a href="#">Mining Services</a>
-          </li>
-          <li className="link">
-            <a href="#">Contact Us</a>
+            <a href="#contact">Contact Us</a>
           </li>
         </ul>
         <ul className="social-links">

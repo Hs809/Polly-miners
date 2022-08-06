@@ -12,7 +12,7 @@ function Service() {
       <div className="service-cards">
         <div className="service-card">
           <div className="image-wrapper">
-            <Image src={service1} width={16} height={12} layout="responsive" />
+            <Image alt="service1" src={service1} width={16} height={12} layout="responsive" />
           </div>
           <h3>One Time Setup</h3>
           <p>
@@ -22,7 +22,7 @@ function Service() {
         </div>
         <div className="service-card">
           <div className="image-wrapper">
-            <Image src={service2} layout="responsive" />
+            <Image alt="service2" src={service2} layout="responsive" />
           </div>
           <h3>One Year Setup &amp; Full Service</h3>
           <p>
@@ -32,7 +32,7 @@ function Service() {
         </div>
         <div className="service-card">
           <div className="image-wrapper">
-            <Image src={service3} layout="responsive" />
+            <Image alt="service3" src={service3} layout="responsive" />
           </div>
           <h3>One Time Service</h3>
           <p>
@@ -42,7 +42,7 @@ function Service() {
         </div>
         <div className="service-card">
           <div className="image-wrapper">
-            <Image src={service4} layout="responsive" />
+            <Image alt="service4" src={service4} layout="responsive" />
           </div>
           <h3>One Year Service</h3>
           <p>

@@ -71,7 +71,7 @@ function Newsletter() {
                 <div className="first-section">
                   <h2>Hey, Wait...</h2>
                   <h2>Suscribe to our Newsletter!</h2>
-                  <p>We provide latest prizes update on GPU's, Mining Rigs, etc.</p>
+                  <p>We provide latest prizes update on GPU&apos;s, Mining Rigs, etc.</p>
                   <form onSubmit={handleSubmit} className="news-form">
                       <input
                       aria-label="Your first name"
@@ -94,7 +94,7 @@ function Newsletter() {
                   </form>
                 </div>
                 <div className="second-section">
-                  <Image src={background} width={16} height={16} layout="responsive" />
+                  <Image alt="newsletter-background" src={background} width={16} height={16} layout="responsive" />
                 </div>
 
             </div>

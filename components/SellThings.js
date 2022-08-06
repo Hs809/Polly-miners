@@ -26,7 +26,7 @@ function SellThings() {
                 end={{ opacity: 1, transform: "translateyY(0px)" }}
                 easeType="cubic-bezier(0.445, 0.05, 0.55, 0.95)"
               >
-                <Image src={pc1} width={400} height={350} layout="responsive" />
+                <Image alt="sell1" src={pc1} width={400} height={350} layout="responsive" />
               </Animate>
             </div>
             <div className="image-container">
@@ -38,7 +38,7 @@ function SellThings() {
                 end={{ opacity: 1, transform: "translateyY(0px)" }}
                 easeType="cubic-bezier(0.445, 0.05, 0.55, 0.95)"
               >
-                <Image src={amd} width={400} height={350} layout="responsive" />
+                <Image alt="sell2" src={amd} width={400} height={350} layout="responsive" />
               </Animate>
             </div>
             <div className="image-container">
@@ -51,6 +51,7 @@ function SellThings() {
                 easeType="cubic-bezier(0.445, 0.05, 0.55, 0.95)"
               >
                 <Image
+                alt="sell3"
                   src={intel}
                   width={400}
                   height={350}
@@ -69,7 +70,7 @@ function SellThings() {
                 end={{ opacity: 1, transform: "translateyY(0px)" }}
                 easeType="cubic-bezier(0.445, 0.05, 0.55, 0.95)"
               >
-                <Image src={gpu} layout="responsive" />
+                <Image alt="sell4" src={gpu} layout="responsive" />
               </Animate>
             </div>
             <div className="image-container">
@@ -81,7 +82,7 @@ function SellThings() {
                 end={{ opacity: 1, transform: "translateyY(0px)" }}
                 easeType="cubic-bezier(0.445, 0.05, 0.55, 0.95)"
               >
-                <Image src={pc2} layout="responsive" />
+                <Image alt="sell5" src={pc2} layout="responsive" />
               </Animate>
             </div>
           </div>
