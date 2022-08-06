@@ -32,7 +32,6 @@ function Newsletter() {
       }
     } catch (err) {
       setStatus("ERROR")
-      console.log(err)
     }
   }
 

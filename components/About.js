@@ -69,7 +69,6 @@ function About() {
     }
   };
 
-  console.log(state);
   return (
     <div className="about-container" id="about">
       <Parallax onEnter={() => setAnimate(true)} />
