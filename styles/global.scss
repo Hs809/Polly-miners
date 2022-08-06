@@ -1,6 +1,6 @@
-$primary-color: #faf4ff;
-$secondary-color: #f3c623;
-$tertiary-color: #844685;
+$primary-color: #f3c623;
+$secondary-color: #faf4ff;
+$tertiary-color: #000;
 $last-color: #10375c;
 $whites: #fff;
 $dark: #000000;
@@ -9,7 +9,19 @@ $title: 40px;
 $subtitle: 30px;
 $subsubtitle: 25px;
 $description: 18px;
-$border-color: rgb(231, 223, 223);
+$border-color: rgb(25, 26, 25);
+// $primary-color: #faf4ff;
+// $secondary-color: #f3c623;
+// $tertiary-color: #844685;
+// $last-color: #10375c;
+// $whites: #fff;
+// $dark: #000000;
+// $secondary-text-color: rgb(32, 31, 31);
+// $title: 40px;
+// $subtitle: 30px;
+// $subsubtitle: 25px;
+// $description: 18px;
+// $border-color: rgb(231, 223, 223);
 
 body {
   background: $primary-color;
