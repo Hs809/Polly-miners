@@ -20,13 +20,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Menu />
-      <Hero />
+      <Hero  />
       <About />
       <SellThings />
       {/* <BestGpu /> */}
-      <Service />
-      <Contact/>
-      <Newsletter />
+      <Service  />
+      <Contact id="contact"/>
+      <Newsletter  />
       <Footer />
       
     </div>

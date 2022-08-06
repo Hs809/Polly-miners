@@ -8,7 +8,7 @@ function Hero() {
   const [play, setPlay] = useState(false);
 
   return (
-    <div className="hero-container">
+    <div className="hero-container" id="hero">
       <div className="hero-details">
         <AnimateGroup play={true}>
           {[
@@ -57,7 +57,7 @@ function Hero() {
           ].map((item, index) => {
             return (
               <Animate
-                key={item}
+                key={index}
                 sequenceIndex={index}
                 duration={0.09}
                 start={{ opacity: 0, transform: "translateY(-10px)" }}

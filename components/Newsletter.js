@@ -95,7 +95,7 @@ function Newsletter() {
                   </form>
                 </div>
                 <div className="second-section">
-                  <Image src={background} width={16} height={14} layout="responsive" />
+                  <Image src={background} width={16} height={16} layout="responsive" />
                 </div>
 
             </div>

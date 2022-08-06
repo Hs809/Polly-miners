@@ -31,8 +31,8 @@ function Contact() {
     );
   };
 
-  return (
-    <div className="contact-container">
+  return ( 
+    <div className="contact-container" id="contact">
       <h1>We are here to solve your queries</h1>
       <p>
         Our inbox is always open for you, you can send your queries or just say
@@ -71,7 +71,8 @@ function Contact() {
                   onChange={setSelectedOption}
                   options={options}
                   width="100%"
-                  height="60px"
+                  instanceId="selectbox"
+                  // height="60px"
                   name="query"
                   required
                   placeholder="Your Query"

@@ -7,7 +7,7 @@ import service4 from "../styles/images/service4.png";
 
 function Service() {
   return (
-    <div className="service-container">
+    <div className="service-container" id="service">
       <h1>Polly Mining Services </h1>
       <div className="service-cards">
         <div className="service-card">

@@ -11,7 +11,7 @@ import { Animate } from "react-simple-animate";
 function SellThings() {
   const [entered, setEntered] = useState(false);
   return (
-    <Parallax onEnter={() => setEntered(true)} onExit={() => setEntered(false)}>
+    <Parallax onEnter={() => setEntered(true)} >
       <div className="sell-things-container">
         <h1>Polly Miners sell all these things</h1>
 
