@@ -10,10 +10,61 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 3rem;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+    white-space: nowrap;
+    .bar-logo {
+      font-size: 25px;
+      display: none;
+    }
+
+    .navbar-drawer {
+      height: 100vh;
+      position: fixed;
+      right: -350px;
+      top: 0px;
+      width: 300px;
+      background: #000;
+      padding: 3rem 2rem;
+      transition: 0.6s all ease-in;
+      .cross-logo {
+        font-size: 25px;
+        margin-left: auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+      .drawer-links {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .dlink {
+          margin-bottom: 3rem;
+          a {
+            font-size: 25px;
+            .contact-btn {
+              padding: 10px 2rem;
+              font-size: 18px;
+              border: 1px solid #fff;
+              border-radius: 8px;
+              background: transparent;
+            }
+          }
+        }
+      }
+    }
+    .show {
+      right: 0px;
+      transition: 0.6s all ease-in;
+    }
+
     background: $navbar;
     .logo {
       color: #ffffff;
-      font-size: 18px;
+      font-size: 25px;
       font-weight: bold;
     }
     .nav-links {
@@ -22,10 +73,28 @@ body {
       align-items: center;
       align-content: space-between;
       .link {
-        margin-right: 3rem;
+        margin-right: 2rem;
+        position: relative;
+        top: 0px;
+        a {
+          font-size: 18px;
+          .contact-btn {
+            padding: 10px 2rem;
+            font-size: 18px;
+            border: 1px solid #fff;
+            border-radius: 8px;
+            background: transparent;
+            cursor: pointer;
+          }
+        }
+      }
+      .link:hover {
+        top: -7px;
+        transition: 0.3s;
       }
     }
   }
+
   .hero-details {
     margin: auto;
     h1 {
@@ -36,6 +105,10 @@ body {
       font-size: 1.5vw;
       margin-bottom: 3rem;
       color: $secondary-text-color;
+    }
+    span {
+      font-size: 5vw;
+      font-weight: bold;
     }
 
     .contact-btn {
@@ -67,33 +140,44 @@ body {
   }
   .about-container {
     padding: 1rem 3rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     .about-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
       .about-mission {
         display: flex;
         align-items: center;
+        background: #ef881d;
+        padding: 5px 3rem;
         p {
           margin-right: 2rem;
           color: $secondary-text-color;
           cursor: pointer;
+          padding-bottom: 8px;
         }
         p.active {
           color: $text-color;
+          padding-bottom: 8px;
+          border-bottom: 1px solid #fff;
+          transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
       }
     }
     .about-description {
-        #values {
-          display: grid;
-          grid-template-columns: 0.7fr 1fr;
-          gap: 3rem;
-          margin-bottom: 2rem;
+      #values {
+        display: grid;
+        grid-template-columns: 0.7fr 1fr;
+        gap: 3rem;
+        margin-bottom: 2rem;
         .description-details {
           h3 {
             font-size: 3vw;
+            margin-bottom: 2rem;
           }
           .description-points {
             position: relative;
@@ -143,7 +227,7 @@ body {
               border-left: 2px dashed rgb(32, 31, 31);
               color: #ffb001;
               background-color: #ffb001;
-              height: 100px;
+              height: 130px;
               width: 0px;
               position: absolute;
               left: 18px;
@@ -152,7 +236,20 @@ body {
           }
         }
       }
+    }
+  }
+}
 
+@media screen and (max-width: 940px) {
+  body {
+    .navbar-container {
+      .bar-logo {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+      }
     }
   }
 }

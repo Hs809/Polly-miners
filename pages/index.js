@@ -23,7 +23,7 @@ export default function Home() {
       <Hero />
       <About />
       <SellThings />
-      <BestGpu />
+      {/* <BestGpu /> */}
       <Service />
       <Contact/>
       <Newsletter />

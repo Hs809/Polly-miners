@@ -39,25 +39,44 @@ function Contact() {
         hii and Tell us what you are mining
       </p>
       <div className="contact-wrapper">
-        <div className="contact-details"></div>
+        {/* <div className="contact-details"></div> */}
         <div className="contact-form">
           <form ref={form} onSubmit={sendEmail}>
-            <h3>Contact Us</h3>
-            <label htmlFor="name">Full Name</label>
-            <input type="text" name="from_name" id="name" required />
-            <label htmlFor="email">Email ID</label>
-            <input type="email" name="email" id="email" required/>
-            <label htmlFor="number">Mobile Number</label>
-            <input type="number" name="mobile" id="mobile-number" required />
+            <h3>Get in Touch</h3>
+            <div className="first-column">
+              <div>
+                {/* <label htmlFor="name">Full Name</label> */}
+                <input type="text" name="from_name" id="name" required placeholder="Full Name" />
+              </div>
+              <div>
+                {/* <label htmlFor="email">Email ID</label> */}
+                <input type="email" name="email" id="email" required  placeholder="Email ID"/>
+              </div>
+            </div>
+              <div>
+                {/* <label htmlFor="number">Mobile Number</label> */}
+                <input
+                  type="number"
+                  name="mobile"
+                  id="mobile-number"
+                  required
+                  placeholder="Mobile Number"
+                />
+              </div>
+              <div>
+                {/* <label htmlFor="query">Your Query</label> */}
 
-            <Select
-              defaultValue={selectedOption}
-              onChange={setSelectedOption}
-              options={options}
-              placeholder="Queries"
-              name="query"
-              required
-            />
+                <Select
+                  defaultValue={selectedOption}
+                  onChange={setSelectedOption}
+                  options={options}
+                  width="100%"
+                  height="60px"
+                  name="query"
+                  required
+                  placeholder="Your Query"
+                />
+              </div>
             <textarea
               name="message"
               placeholder="Your Message"
@@ -67,7 +86,7 @@ function Contact() {
               required
             ></textarea>
             <button className="submit-btn" type="submit">
-              Get in touch with us
+              Submit
             </button>
           </form>
         </div>

@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import background from '../styles/images/newsletterbackground.png'
+import Image from 'next/image'
 
 function Newsletter() {
     const [status, setStatus] = useState(null)
@@ -45,9 +47,8 @@ function Newsletter() {
   }
   return (
     <div className='newsletter-container'>
-        <div>
             {status === "SUCCESS" && (
-                <>
+                <div className="news-letter">
                     <p>
                         Welcome aboard {name ? `, ${name}` : ""}{" "}
                         <span role="img" aria-label="Ship">
@@ -55,44 +56,50 @@ function Newsletter() {
                         </span>
                     </p>
                         <p>Please check your inbox to confirm the subscription!</p>
-                </>
+                </div>
             )}
         {status === "ERROR" && (
-            <>
+            <div className="news-letter">
                 <p>Oops, something went wrong...</p>
             <p>
                 Please,{" "}
                 <button onClick={() => setStatus(null)}>try again.</button>
             </p>
-            </>
+            </div>
         )}
         {status === null && (
-            <div>
-                <h2>Suscribe to our Newsletter To get Weekly Update on GPU prises</h2>
-                <form onSubmit={handleSubmit} className="news-form">
-                    <input
-                    aria-label="Your first name"
-                    name="fields[first_name]"
-                    placeholder="Your first name"
-                    type="text"
-                    onChange={handleNameChange}
-                    value={name}
-                    />
-                    <input
-                    aria-label="Your email address"
-                    name="email_address"
-                    placeholder="Your email address"
-                    required
-                    type="email"
-                    onChange={handleEmailChange}
-                    value={email}
-                    />
-                    <button>SUBSCRIBE</button>
-                </form>
+            <div className='news-letter-wrapper'>
+                <div className="first-section">
+                  <h2>Hey, Wait...</h2>
+                  <h2>Suscribe to our Newsletter!</h2>
+                  <p>We provide latest prizes update on GPU's, Mining Rigs, etc.</p>
+                  <form onSubmit={handleSubmit} className="news-form">
+                      <input
+                      aria-label="Your first name"
+                      name="fields[first_name]"
+                      placeholder="Your first name"
+                      type="text"
+                      onChange={handleNameChange}
+                      value={name}
+                      />
+                      <input
+                      aria-label="Your email address"
+                      name="email_address"
+                      placeholder="Your email address"
+                      required
+                      type="email"
+                      onChange={handleEmailChange}
+                      value={email}
+                      />
+                      <button>SUBSCRIBE</button>
+                  </form>
+                </div>
+                <div className="second-section">
+                  <Image src={background} width={16} height={14} layout="responsive" />
+                </div>
 
             </div>
         )}
-        </div>
     
     </div>
   )
