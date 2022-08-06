@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import {  Animate } from "react-simple-animate";
+import { Animate } from "react-simple-animate";
+import Link from "next/link";
 
 function Menu() {
   const [state, setState] = useState(false);
@@ -9,10 +10,9 @@ function Menu() {
   return (
     <nav className="navbar-container">
       {/* <img src="" alt="" className="logo" /> */}
-      <a href="#">
-       <h2 className="logo">Polly Miners</h2>
-
-      </a>
+      <Link href="/">
+        <h2 className="logo">Polly Miners</h2>
+      </Link>
       <div className="bar-logo" onClick={() => setState(!state)}>
         <FaBars />
       </div>

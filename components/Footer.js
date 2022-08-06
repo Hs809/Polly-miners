@@ -5,11 +5,14 @@ import {
   AiOutlineFacebook,
 } from "react-icons/ai";
 import { RiDiscordLine } from "react-icons/ri";
+import Link from "next/link";
 
 function Footer() {
   return (
     <div className="footer-container">
-      <h2>Polly Miners</h2>
+      <Link href="/">
+        <h2>Polly Miners</h2>
+      </Link>
       <div className="footer-wrapper">
         <ul className="footer-links">
           <li className="link">
@@ -52,8 +55,9 @@ function Footer() {
         </ul>
       </div>
       <hr />
-      <p><a href="/">&copy;PollyMiners.in</a> </p>
-
+      <p>
+        <Link href="/">&copy;PollyMiners.in</Link>
+      </p>
     </div>
   );
 }
