@@ -1,22 +1,41 @@
 import React from "react";
+
+import { RiDiscordLine } from "react-icons/ri";
+import Link from "next/link";
+import Image from "next/image";
+import { BiPhoneCall } from "react-icons/bi";
+import { FiFacebook } from "react-icons/fi";
 import {
   AiOutlineYoutube,
   AiOutlineInstagram,
-  AiOutlineFacebook,
+  AiOutlineWhatsApp,
 } from "react-icons/ai";
-import { RiDiscordLine } from "react-icons/ri";
-import Link from "next/link";
+import Newsletter from "./Newsletter";
 
 function Footer() {
   return (
     <div className="footer-container">
-      <Link href="/">
-        <h2>Polly Miners</h2>
-      </Link>
       <div className="footer-wrapper">
-        <ul className="footer-links">
+        <div className="footer-header">
+          <div className="footer-logo">
+            <Image
+              className="logo"
+              src="/Images/bg-logo.png"
+              alt="logo"
+              width={150}
+              height={140}
+            />
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <a href="#about">
+            <button className="footer-btn">Read More</button>
+          </a>
+        </div>
+
+        <ul className="quick-links">
+          <h3>Quick Links</h3>
           <li className="link">
-            <a href="#home">Home</a>
+            <a href="#hero">Home</a>
           </li>
           <li className="link">
             <a href="#about">About Us</a>
@@ -28,34 +47,49 @@ function Footer() {
             <a href="#service">Mining Services</a>
           </li>
           <li className="link">
+            <a href="#customers">Happy Customers</a>
+          </li>
+          <li className="link">
             <a href="#contact">Contact Us</a>
           </li>
         </ul>
-        <ul className="social-links">
-          <li className="slink">
-            <a href="#">
-              <AiOutlineYoutube style={{ color: "#E21717" }} />
+        <ul className="contact-links">
+          <h3>Contact Us</h3>
+          <li>
+            <BiPhoneCall />
+            91+ 89282 88856
+          </li>
+          <li>
+            <AiOutlineYoutube />
+            <a
+              href="https://www.youtube.com/c/POLLYMINERS"
+              target="_blank"
+              rel="noreferrer"
+            >
+              www.youtube.com
             </a>
           </li>
-          <li className="slink">
-            <a href="#">
-              <AiOutlineInstagram style={{ color: "#E83A59" }} />
-            </a>
+          <li>
+            <AiOutlineInstagram />
+            <a href="#">www.instagram.com</a>
           </li>
-          <li className="slink">
-            <a href="#">
-              <AiOutlineFacebook style={{ color: "#1B98F5" }} />
-            </a>
+          <li>
+            <FiFacebook />
+            <a href="#">www.facebook.com</a>
           </li>
-          <li className="slink">
-            <a href="#">
-              <RiDiscordLine style={{ color: "#383CC1" }} />{" "}
-            </a>
+          <li>
+            <AiOutlineWhatsApp />
+            <a href="#">www.whatsapp.com</a>
           </li>
+        </ul>
+        <ul className="newsletter">
+          <h3>Newsletter</h3>
+          <Newsletter />
+          <p>Suscribe to our Newsletter to get daily updates on GPU&apos;s prices</p>
         </ul>
       </div>
       <hr />
-      <p>
+      <p className="copyright">
         <Link href="/">&copy;PollyMiners.in</Link>
       </p>
     </div>

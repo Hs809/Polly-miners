@@ -10,6 +10,7 @@ import Service from '../components/Service'
 import Contact from '../components/Contact'
 import Newsletter from '../components/Newsletter'
 import Footer from '../components/Footer'
+import Customers from '../components/Customers'
 
 export default function Home() {
   return (
@@ -21,12 +22,13 @@ export default function Home() {
       </Head>
       <Menu />
       <Hero  />
-      <About />
-      <SellThings />
-      {/* <BestGpu /> */}
       <Service  />
+      <About />
+      {/* <SellThings /> */}
+      {/* <BestGpu /> */}
       <Contact id="contact"/>
-      <Newsletter  />
+      <Customers />
+      {/* <Newsletter  /> */}
       <Footer />
       
     </div>

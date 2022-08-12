@@ -1,20 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import HeroImage from "../styles/images/hero.png";
-import { AnimateKeyframes, AnimateGroup, Animate } from "react-simple-animate";
-import { divStyle, buttonStyle } from "../styles/styles";
-
+import { AnimateGroup, Animate, AnimateKeyframes } from "react-simple-animate";
 function Hero() {
-  const [play, setPlay] = useState(false);
-
   return (
-    <div className="hero-container" id="hero">
+    <div id="hero" className="hero-container">
       <div className="hero-details">
+        <p className="welcome">Welcome To Polly Miners</p>
         <AnimateGroup play={true}>
           {[
-            "M",
+            "E",
             "a",
-            "k",
+            "s",
             "e",
             " ",
             "Y",
@@ -39,13 +36,6 @@ function Hero() {
             "n",
             "c",
             "e",
-            " ",
-            "R",
-            "i",
-            "c",
-            "h",
-            "e",
-            "r",
             " ",
             "W",
             "i",
@@ -77,9 +67,9 @@ function Hero() {
           end={{ opacity: 1, transform: "translate(0px, 10px)" }}
         >
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-            illo quod quam deserunt veniam impedit sunt harum alias soluta
-            reprehenderit?
+            We here at polly miners will provide you with the most competitive
+            service, graphic cards, components and gaming PCs at jaw-dropping
+            price.
           </p>
         </Animate>
         <Animate
@@ -91,15 +81,28 @@ function Hero() {
         >
           <button className="contact-btn">Contact Us</button>
         </Animate>
+        <div className="circle"></div>
       </div>
       <div className="hero-img">
-        <Animate
+        <AnimateKeyframes
           play={true}
-          duration={0.6}
-          delay={0.04}
-          start={{ opacity: 0, transform: "translateX(50px)" }}
-          end={{ opacity: 1, transform: "translateX(0px)" }}
+          duration="5"
+          direction="alternate"
+          iterationCount="infinite"
+          keyframes={[
+            "transform: translateY(-50px)",
+            "transform: translateY( 0px)",
+            "transform: translateY(-50px)",
+            "transform: translateY(0px)",
+          ]}
         >
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill="#dd9901"
+              d="M39.6,-67.6C52.7,-61,65.7,-53.2,72.2,-41.7C78.8,-30.3,78.8,-15.1,78.5,-0.2C78.1,14.8,77.4,29.5,70.8,40.8C64.1,52,51.6,59.8,38.8,67.2C26,74.6,13,81.6,0,81.6C-13,81.5,-26,74.5,-39.3,67.5C-52.6,60.4,-66.3,53.3,-76.4,42C-86.6,30.8,-93.2,15.4,-90.9,1.3C-88.7,-12.8,-77.5,-25.6,-67.7,-37.3C-57.9,-49.1,-49.3,-59.8,-38.2,-67.6C-27.2,-75.4,-13.6,-80.1,-0.2,-79.8C13.2,-79.5,26.5,-74.2,39.6,-67.6Z"
+              transform="translate(100 100)"
+            />
+          </svg>
           <Image
             src={HeroImage}
             alt="Hero Image"
@@ -108,8 +111,9 @@ function Hero() {
             layout="responsive"
             objectFit="cover"
           />
-        </Animate>
+        </AnimateKeyframes>
       </div>
+      <div className="circle2"></div>
     </div>
   );
 }

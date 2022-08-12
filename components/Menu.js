@@ -3,6 +3,7 @@ import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import { Animate } from "react-simple-animate";
 import Link from "next/link";
+import Image from "next/image";
 
 function Menu() {
   const [state, setState] = useState(false);
@@ -10,8 +11,8 @@ function Menu() {
   return (
     <nav className="navbar-container">
       {/* <img src="" alt="" className="logo" /> */}
-      <Link href="/">
-        <h2 className="logo">Polly Miners</h2>
+      <Link href="/" >
+        <Image className="logo" src="/Images/logo.png" alt="logo" width={100} height={60}   />
       </Link>
       <div className="bar-logo" onClick={() => setState(!state)}>
         <FaBars />
@@ -23,17 +24,17 @@ function Menu() {
         </div>
         <ul className="drawer-links">
           <li className="dlink">
-            <a href="#home">Home</a>
+            <a href="#hero">HOME</a>
           </li>
           <li className="dlink">
-            <a href="#about">About Us</a>
+            <a href="#about">ABOUT</a>
           </li>
           <li className="dlink">
-            <a href="#service">Mining Service</a>
+            <a href="#service">SERVICES</a>
           </li>
           <li className="dlink">
             <a href="#contact">
-              <button className="contact-btn"> Contact Us</button>
+              <button className="contact-btn"> CONTACT US</button>
             </a>
           </li>
         </ul>
@@ -48,7 +49,7 @@ function Menu() {
           easeType="cubic-bezier(0.445, 0.05, 0.55, 0.95)"
         >
           <li className="link">
-            <a href="#home">Home</a>
+            <a href="#hero">HOME</a>
           </li>
         </Animate>
         <Animate
@@ -60,7 +61,7 @@ function Menu() {
           easeType="cubic-bezier(0.445, 0.05, 0.55, 0.95)"
         >
           <li className="link">
-            <a href="#about">About Us</a>
+            <a href="#about">ABOUT</a>
           </li>
         </Animate>
         {/* <Animate
@@ -84,7 +85,7 @@ function Menu() {
           easeType="cubic-bezier(0.445, 0.05, 0.55, 0.95)"
         >
           <li className="link">
-            <a href="#service">Mining Service</a>
+            <a href="#service">SERVICES</a>
           </li>
         </Animate>
         <Animate
@@ -96,8 +97,22 @@ function Menu() {
           easeType="cubic-bezier(0.445, 0.05, 0.55, 0.95)"
         >
           <li className="link">
+            <a href="#customers">
+              HAPPY CUSTOMERS
+            </a>
+          </li>
+        </Animate>
+        <Animate
+          play={true}
+          delay={1.4}
+          duration={0.8}
+          start={{ opacity: 0, transform: "translateY(-20px)" }}
+          end={{ opacity: 1, transform: "translateY(0px)" }}
+          easeType="cubic-bezier(0.445, 0.05, 0.55, 0.95)"
+        >
+          <li className="link">
             <a href="#contact">
-              <button className="contact-btn">Contact Us</button>
+              <button className="contact-btn">CONTACT US</button>
             </a>
           </li>
         </Animate>

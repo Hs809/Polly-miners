@@ -8,47 +8,68 @@ import service4 from "../styles/images/service4.png";
 function Service() {
   return (
     <div className="service-container" id="service">
-      <h1>Polly Mining Services </h1>
-      <div className="service-cards">
-        <div className="service-card">
-          <div className="image-wrapper">
-            <Image alt="service1" src={service1} width={16} height={12} layout="responsive" />
-          </div>
-          <h3>One Time Setup</h3>
+      <div className="service-wrapper">
+        <div className="service-info">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-            quo?
+            WHAT <span>SERVICES</span>{" "}
+          </p>
+          <h3>WE OFFER</h3>
+          <div className="offer-line"></div>
+          <p className="service-description">
+            We offer of service from what is the best gpu/coin/software to
+            making maximum return on investment.
           </p>
         </div>
-        <div className="service-card">
-          <div className="image-wrapper">
-            <Image alt="service2" src={service2} layout="responsive" />
+        <div className="service-cards">
+          <div className="service-card">
+            <div className="card-section">
+              <p>01</p>
+              <div className="image-wrapper">
+                <Image
+                  alt="service1"
+                  src="/Images/month.svg"
+                  width={130}
+                  height={90}
+                />
+              </div>
+            </div>
+            <h3>
+              One Time <br /> Service
+            </h3>
           </div>
-          <h3>One Year Setup &amp; Full Service</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-            quo?
-          </p>
-        </div>
-        <div className="service-card">
-          <div className="image-wrapper">
-            <Image alt="service3" src={service3} layout="responsive" />
+          <div className="service-card">
+            <div className="card-section">
+              <p>02</p>
+              <div className="image-wrapper">
+                <Image
+                  alt="service1"
+                  src="/Images/year.svg"
+                  width={130}
+                  height={90}
+                />
+              </div>
+            </div>
+            <h3>
+              One Year Full  <br /> Service with Setup
+            </h3>
           </div>
-          <h3>One Time Service</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-            quo?
-          </p>
-        </div>
-        <div className="service-card">
-          <div className="image-wrapper">
-            <Image alt="service4" src={service4} layout="responsive" />
+          <div className="service-card">
+            <div className="card-section">
+              <p>03</p>
+              <div className="image-wrapper">
+                <Image
+                  alt="service1"
+                  src="/Images/setup.svg"
+                  width={130}
+                  height={90}
+                />
+              </div>
+            </div>
+            <h3>
+              One Year Only <br />
+              Service
+            </h3>
           </div>
-          <h3>One Year Service</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-            quo?
-          </p>
         </div>
       </div>
     </div>
