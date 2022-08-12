@@ -1,7 +1,6 @@
 import React from "react";
 
-import { RiDiscordLine } from "react-icons/ri";
-import Link from "next/link";
+import Link from 'next/link'
 import Image from "next/image";
 import { BiPhoneCall } from "react-icons/bi";
 import { FiFacebook } from "react-icons/fi";
@@ -27,30 +26,30 @@ function Footer() {
             />
           </div>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <a href="#about">
+          <Link href="#about">
             <button className="footer-btn">Read More</button>
-          </a>
+          </Link>
         </div>
 
         <ul className="quick-links">
           <h3>Quick Links</h3>
           <li className="link">
-            <a href="#hero">Home</a>
+            <Link href="#hero">Home</Link>
           </li>
           <li className="link">
-            <a href="#about">About Us</a>
+            <Link href="#about">About Us</Link>
           </li>
           {/* <li className="link">
-            <a href="#">Latest Gpu&apos;s</a>
+            <Link href="#">Latest Gpu&apos;s</Link>
           </li> */}
           <li className="link">
-            <a href="#service">Mining Services</a>
+            <Link href="#service">Mining Services</Link>
           </li>
           <li className="link">
-            <a href="#customers">Happy Customers</a>
+            <Link href="#customers">Happy Customers</Link>
           </li>
           <li className="link">
-            <a href="#contact">Contact Us</a>
+            <Link href="#contact">Contact Us</Link>
           </li>
         </ul>
         <ul className="contact-links">
@@ -71,21 +70,23 @@ function Footer() {
           </li>
           <li>
             <AiOutlineInstagram />
-            <a href="#">www.instagram.com</a>
+            <Link href="#">www.instagram.com</Link>
           </li>
           <li>
             <FiFacebook />
-            <a href="#">www.facebook.com</a>
+            <Link href="#">www.facebook.com</Link>
           </li>
           <li>
             <AiOutlineWhatsApp />
-            <a href="#">www.whatsapp.com</a>
+            <Link href="#">www.whatsapp.com</Link>
           </li>
         </ul>
         <ul className="newsletter">
           <h3>Newsletter</h3>
           <Newsletter />
-          <p>Suscribe to our Newsletter to get daily updates on GPU&apos;s prices</p>
+          <p>
+            Suscribe to our Newsletter to get daily updates on GPU&apos;s prices
+          </p>
         </ul>
       </div>
       <hr />

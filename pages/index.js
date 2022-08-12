@@ -4,7 +4,6 @@ import BestGpu from '../components/BestGpu'
 import Hero from '../components/Hero'
 import Menu from '../components/Menu'
 import SellThings from '../components/SellThings'
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from '../styles/Home.module.css'
 import Service from '../components/Service'
 import Contact from '../components/Contact'
