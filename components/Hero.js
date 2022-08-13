@@ -6,7 +6,7 @@ function Hero() {
   return (
     <div id="hero" className="hero-container">
       <div className="hero-details">
-        <p className="welcome">Welcome To Polly Miners</p>
+        <p className="welcome">Welcome To <span>Polly Miners</span></p>
         <AnimateGroup play={true}>
           {[
             "E",
@@ -108,6 +108,7 @@ function Hero() {
             alt="Hero Image"
             height={14}
             width={16}
+            priority="true"
             layout="responsive"
             objectFit="cover"
           />

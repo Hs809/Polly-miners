@@ -7,6 +7,7 @@ $primary-color: #faf4ff;
 $secondary-color: #feb000;
 $tertiary-color: #000;
 $last-color: #127cbd;
+$transparent-yellow:#edc03f9e;
 $whites: #fff;
 $secondary-text-color: rgb(32, 31, 31);
 $title: 40px;
@@ -64,8 +65,10 @@ body {
           margin-bottom: 3rem;
           a {
             font-size: $subtitle;
+            color: $primary-color;
             .contact-btn {
               padding: 10px 2rem;
+              color: $primary-color;
               font-size: 18px;
               border: 1px solid $whites;
               border-radius: 8px;
@@ -94,33 +97,48 @@ body {
       .link {
         margin-right: 2rem;
         position: relative;
-        top: 0px;
+        color: $tertiary-color;
         a {
           font-size: 18px;
           color: $tertiary-color;
+        } 
+      }
+      .link-btn{
           .contact-btn {
             color: $tertiary-color;
             padding: 10px 2rem;
             font-size: 18px;
             border: 1px solid $whites;
             border-radius: 8px;
-            background: transparent;
+            background: $secondary-color;
             cursor: pointer;
-          }
+          
+
         }
       }
-      .link:hover {
-        top: -7px;
-        transition: 0.3s;
+      .link:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: $tertiary-color;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+      
+      .link:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
       }
     }
   }
-  #hero {
-    background-color: #feb000;
-  }
   .hero-container {
+    background-color: $secondary-color;
     display: grid;
-    padding: 1rem 3rem;
+    padding: 3rem;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     position: relative;
@@ -146,20 +164,25 @@ body {
         font-size: $description;
         margin-bottom: 3rem;
         margin-top: 1rem;
-        color: #fdfdfd;
+        color: $primary-color;
+        span{
+          font-size: $description;
+          color: $tertiary-color;
+          font-weight: bolder;
+        }
       }
       span {
-        color: #fffffe;
+        color: $whites;
         font-size: $title;
         font-weight: bold;
       }
 
       .contact-btn {
-        background: #127cbd;
+        background: $last-color;
         border: none;
         border-radius: 5px;
         font-size: 22px;
-        color: #fff;
+        color: $whites;
         font-weight: 600;
         padding: 1rem 3rem;
         cursor: pointer;
@@ -175,7 +198,7 @@ body {
     .circle2 {
       width: 300px;
       height: 300px;
-      background: #edc03f9e;
+      background: $transparent-yellow;
       border-radius: 50%;
       position: absolute;
       bottom: -140px;
@@ -185,7 +208,7 @@ body {
     .circle {
       width: 300px;
       height: 300px;
-      background: #edc03f9e;
+      background: $transparent-yellow;
       border-radius: 50%;
       position: absolute;
       top: -140px;
@@ -194,153 +217,6 @@ body {
     }
   }
 
-  // .about-container {
-  //   padding: 1rem 3rem;
-  //   min-height: 100vh;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   background-color: $primary-color;
-  //   .about-header {
-  //     display: flex;
-  //     justify-content: space-between;
-  //     align-items: center;
-  //     margin-bottom: 3rem;
-  //     h3 {
-  //       font-size: $subtitle;
-  //       color: $last-color;
-  //     }
-  //     .about-mission {
-  //       display: flex;
-  //       align-items: center;
-  //       // background: $secondary-color;
-  //       padding: 5px 3rem;
-  //       p {
-  //         margin-right: 2rem;
-  //         color: $secondary-text-color;
-  //         cursor: pointer;
-  //         padding-bottom: 8px;
-  //       }
-  //       p.active {
-  //         color: $secondary-color;
-  //         padding-bottom: 8px;
-  //         border-bottom: 1px solid $secondary-color;
-  //         transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  //       }
-  //     }
-  //   }
-  //   .about-description {
-  //     #values {
-  //       display: grid;
-  //       grid-template-columns: 0.7fr 1fr;
-  //       gap: 3rem;
-  //       margin-bottom: 2rem;
-  //       .description-details {
-  //         h3 {
-  //           font-size: $subtitle;
-  //           margin-bottom: 1rem;
-  //           color: $last-color;
-  //         }
-  //         .description-points {
-  //           position: relative;
-  //           .first-point {
-  //             display: flex;
-  //             margin-bottom: 2rem;
-  //             .first-point-wrapper {
-  //               h3 {
-  //                 color: $tertiary-color;
-  //                 font-size: $subsubtitle;
-  //               }
-  //               p {
-  //                 color: $tertiary-color;
-  //                 font-size: $description;
-  //               }
-  //               display: block;
-  //             }
-  //           }
-  //           .first-point::before {
-  //             content: "1";
-  //             width: 35px;
-  //             height: 35px;
-  //             border-radius: 50%;
-  //             background: #000000;
-  //             margin-right: 1rem;
-  //             position: relative;
-  //             top: 0px;
-  //             display: flex;
-  //             justify-content: center;
-  //             align-items: center;
-  //             font-size: 22px;
-  //           }
-  //           .second-point {
-  //             display: flex;
-  //             .second-point-wrapper {
-  //               display: block;
-  //               h3 {
-  //                 color: $tertiary-color;
-  //                 font-size: $subsubtitle;
-  //               }
-  //               p {
-  //                 color: $tertiary-color;
-  //                 font-size: $description;
-  //               }
-  //             }
-  //           }
-  //           .second-point::before {
-  //             content: "2";
-  //             width: 35px;
-  //             height: 35px;
-  //             border-radius: 50%;
-  //             background: #000000;
-  //             margin-right: 1rem;
-  //             position: relative;
-  //             top: 0px;
-  //             display: flex;
-  //             justify-content: center;
-  //             align-items: center;
-  //             font-size: 22px;
-  //           }
-  //           hr {
-  //             border: none;
-  //             border-left: 2px dashed rgb(32, 31, 31);
-  //             color: #ffb001;
-  //             background-color: #ffb001;
-  //             height: 100px;
-  //             width: 0px;
-  //             position: absolute;
-  //             left: 18px;
-  //             top: 16px;
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
-  // .sell-things-container {
-  //   padding: 1rem 3rem;
-  //   text-align: center;
-  //   h1 {
-  //     font-size: $title;
-  //     color: $last-color;
-  //     margin-bottom: 2rem;
-  //   }
-  //   .sell-things-wrapper {
-  //     .first-row {
-  //       display: grid;
-  //       grid-template-columns: 1fr 1fr 1fr;
-  //     }
-  //     .second-row {
-  //       display: grid;
-  //       grid-template-columns: 1fr 1fr;
-  //     }
-  //   }
-  // }
-  // .best-gpu-container {
-  //   padding: 1rem 3rem;
-  //   .carousel-container {
-  //     margin: auto;
-  //   }
-  // }
   .service-container {
     padding: 4rem 3rem;
     margin-bottom: 2rem;
@@ -709,7 +585,7 @@ body {
 
   .footer-container {
     padding: 1rem 5rem;
-    background: #000000;
+    background: $tertiary-color;
     .footer-wrapper {
       display: flex;
       justify-content: space-between;
@@ -723,8 +599,8 @@ body {
           font-size: 18px;
           padding: 10px 2rem;
           margin-top: 2rem;
-          color: #fff;
-          background: #feb000;
+          color: $whites;
+          background: $secondary-color;
           border: none;
           border-radius: 6px;
           white-space: nowrap;
@@ -735,15 +611,17 @@ body {
         margin: auto;
         margin-top: 2rem;
         width: 250px;
-
+        color: $primary-color;
         h3 {
           font-size: 20px;
+          color: $primary-color;
           margin-bottom: 1rem;
         }
         li {
           margin-bottom: 1rem;
           display: flex;
           a{
+            color: $primary-color;
             white-space: nowrap;
           }
         }
@@ -751,9 +629,31 @@ body {
       .contact-links {
         width: 300px;
         li {
+          color: $primary-color;
           svg {
-            font-size: 25px;
+            font-size: 30px;
+            color: #3DBE29;
             margin-right: 1rem;
+          }
+        }
+        li:nth-child(3){
+          svg{
+            color: #BF3325;
+          }
+        }
+        li:nth-child(4){
+          svg{
+            color: #E6425E;
+          }
+        }
+        li:nth-child(5){
+          svg{
+            color: #23C4ED;
+          }
+        }
+        li:nth-child(6){
+          svg{
+            color: #1FAA59;
           }
         }
       }
@@ -763,13 +663,16 @@ body {
 
         h3 {
           margin-bottom: 1rem;
+          color: $primary-color;
         }
         p {
+          color: $primary-color;
           font-size: 15px;
           margin-top: 1rem;
         }
         .news-form {
-          border: 1px solid #feb000;
+          border: 1px solid $secondary-color;
+          color: $primary-color;
           display: flex;
           width: 300px;
           padding: 0rem 0.5rem;
@@ -777,6 +680,7 @@ body {
           align-items: center;
           input {
             padding: 10px 0rem;
+            color: $primary-color;
             font-size: 18px;
             background: transparent;
             border: none;
@@ -790,7 +694,7 @@ body {
             padding: 10px 1rem;
             font-size: 16px;
             display: flex;
-            background: #feb000;
+            background: $secondary-color;
             padding: 5px;
             border: none;
             border-radius: 5px;
@@ -1078,6 +982,12 @@ body {
       .footer-container {
         padding: 1rem 1rem;
       }
+      .hero-container{
+        padding-top: 5rem;
+      }
+      .customers-container{
+        padding: 1rem 3rem;
+      }
       .contact-container {
         p {
           margin-bottom: 1rem;
@@ -1168,6 +1078,12 @@ body {
     .contact-container .contact-wrapper {
       .contact-details {
         grid-template-columns: 1fr;
+        .cimage-container{
+          margin: auto;
+        }
+        .cdetails-container{
+          text-align: center;
+        }
       }
     }
     .service-container {
