@@ -1,9 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import service1 from "../styles/images/service1.png";
-import service2 from "../styles/images/service2.png";
-import service3 from "../styles/images/service3.png";
-import service4 from "../styles/images/service4.png";
+
 
 function Service() {
   return (
@@ -30,6 +27,7 @@ function Service() {
                   src="/Images/month.svg"
                   width={130}
                   height={90}
+                  priority
                 />
               </div>
             </div>
@@ -46,6 +44,7 @@ function Service() {
                   src="/Images/year.svg"
                   width={130}
                   height={90}
+                  priority
                 />
               </div>
             </div>
@@ -62,6 +61,7 @@ function Service() {
                   src="/Images/setup.svg"
                   width={130}
                   height={90}
+                  priority
                 />
               </div>
             </div>

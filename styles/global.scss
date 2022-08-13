@@ -55,6 +55,7 @@ body {
         justify-content: flex-end;
         align-items: center;
         margin-bottom: 2rem;
+        color: $primary-color;
       }
       .drawer-links {
         display: flex;
@@ -708,6 +709,9 @@ body {
     }
     .copyright {
       text-align: center;
+      a{
+        color: $primary-color;
+      }
     }
   }
 }

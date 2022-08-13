@@ -21,6 +21,7 @@ function Footer() {
               className="logo"
               src="/Images/bg-logo.png"
               alt="logo"
+              priority
               width={150}
               height={140}
             />
@@ -91,7 +92,7 @@ function Footer() {
       </div>
       <hr />
       <p className="copyright">
-        <Link href="/">&copy;PollyMiners.in</Link>
+        <Link href="/">&copy;&#x20;PollyMiners.in</Link>
       </p>
     </div>
   );
