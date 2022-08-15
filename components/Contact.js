@@ -97,9 +97,9 @@ function Contact() {
             <p className="csubtitle">OUR VALUES AND</p>
             <h3>STRATEGIES</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-              aliquid quis explicabo et nemo velit similique voluptas vitae
-              eveniet quidem?
+              Polly Miners values our customers and make such strategic 
+              planning to help them to ease their experience and provide them 
+              best service to resolve their problems.
             </p>
           </div>
         </div>

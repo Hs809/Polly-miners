@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
-
-
+import Link from "next/link";
 function Service() {
   return (
     <div className="service-container" id="service">
@@ -49,7 +48,7 @@ function Service() {
               </div>
             </div>
             <h3>
-              One Year Full  <br /> Service with Setup
+              One Year Full <br /> Service with Setup
             </h3>
           </div>
           <div className="service-card">

@@ -3,7 +3,7 @@ import React from "react";
 import Link from 'next/link'
 import Image from "next/image";
 import { BiPhoneCall } from "react-icons/bi";
-import { FiFacebook } from "react-icons/fi";
+import { BsTelegram } from "react-icons/bs";
 import {
   AiOutlineYoutube,
   AiOutlineInstagram,
@@ -26,7 +26,7 @@ function Footer() {
               height={140}
             />
           </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>Ease your Gaming and  Mining Experience</p>
           <Link href="#about">
             <button className="footer-btn">Read More</button>
           </Link>
@@ -38,14 +38,14 @@ function Footer() {
             <Link href="#hero">Home</Link>
           </li>
           <li className="link">
+            <Link href="#service">Mining Services</Link>
+          </li>
+          <li className="link">
             <Link href="#about">About Us</Link>
           </li>
           {/* <li className="link">
             <Link href="#">Latest Gpu&apos;s</Link>
           </li> */}
-          <li className="link">
-            <Link href="#service">Mining Services</Link>
-          </li>
           <li className="link">
             <Link href="#customers">Happy Customers</Link>
           </li>
@@ -61,25 +61,33 @@ function Footer() {
           </li>
           <li>
             <AiOutlineYoutube />
-            <a
+            <Link
               href="https://www.youtube.com/c/POLLYMINERS"
-              target="_blank"
               rel="noreferrer"
             >
-              www.youtube.com
-            </a>
+              <a target="_blank">Youtube</a>
+              
+            </Link>
           </li>
-          <li>
+          {/* <li>
             <AiOutlineInstagram />
             <Link href="#">www.instagram.com</Link>
           </li>
           <li>
             <FiFacebook />
             <Link href="#">www.facebook.com</Link>
+          </li> */}
+          <li>
+            <BsTelegram />
+            <Link href="https://t.me/polly_miner">
+              <a target="_blank">Telegram</a> 
+            </Link>
           </li>
           <li>
             <AiOutlineWhatsApp />
-            <Link href="#">www.whatsapp.com</Link>
+            <Link href="https://wa.me/message/BP2SEUBKT2R2G1">
+              <a target="_blank">WhatsApp</a>
+             </Link>
           </li>
         </ul>
         <ul className="newsletter">
