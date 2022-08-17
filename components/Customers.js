@@ -1,8 +1,5 @@
 import React from "react";
-import Slider from "react-slick";
-import { useEffect, useState } from "react";
 import Link from "next/link";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 
@@ -29,8 +26,6 @@ function Customers() {
         centeredSlides={true}
         navigation
         pagination={{ clickable: true }}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
       >
         <SwiperSlide>
           <Link
@@ -126,7 +121,7 @@ function Customers() {
                     Graphic Card with total 516 MHS. We have Provided him with
                     One year service on GPU&apos;s.
                   </p>
-                </div>    
+                </div>
               </div>
             </a>
           </Link>

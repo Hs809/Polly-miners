@@ -1,13 +1,10 @@
 import Head from 'next/head'
 import About from '../components/About'
-import BestGpu from '../components/BestGpu'
 import Hero from '../components/Hero'
 import Menu from '../components/Menu'
-import SellThings from '../components/SellThings'
 import styles from '../styles/Home.module.css'
 import Service from '../components/Service'
 import Contact from '../components/Contact'
-import Newsletter from '../components/Newsletter'
 import Footer from '../components/Footer'
 import Customers from '../components/Customers'
 

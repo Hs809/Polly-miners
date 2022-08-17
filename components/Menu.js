@@ -13,7 +13,7 @@ function Menu() {
       {/* <img src="" alt="" className="logo" /> */}
       <Link href="/" passHref>
         <a>
-          <Image className="logo" src="/Images/logo.png" property alt="logo" width={100} height={60}   />
+          <Image className="logo" src="/Images/logo.png" priority alt="logo" width={120} height={70}   />
         </a>
       </Link>
       <div className="bar-logo" onClick={() => setState(!state)}>
@@ -33,6 +33,9 @@ function Menu() {
           </li>
           <li className="dlink">
             <Link href="#service">SERVICES</Link>
+          </li>
+          <li className="dlink">
+            <Link href="#customers">Happy Customers</Link>
           </li>
           <li className="dlink">
             <Link href="#contact">
