@@ -6,14 +6,18 @@ import { BiPhoneCall } from "react-icons/bi";
 import { BsTelegram } from "react-icons/bs";
 import {
   AiOutlineYoutube,
-  AiOutlineInstagram,
   AiOutlineWhatsApp,
 } from "react-icons/ai";
+import Head from "next/head";
 import Newsletter from "./Newsletter";
 
 function Footer() {
   return (
     <div className="footer-container">
+      <Head>
+        <title>Polly Miners</title>
+        <meta name="description" content="Polly miners, graphic cards, mining rigs, gaming pc, etc." />
+      </Head>
       <div className="footer-wrapper">
         <div className="footer-header">
           <div className="footer-logo">

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-
+import Head from "next/head";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,6 +12,10 @@ import "swiper/css/scrollbar";
 function Customers() {
   return (
     <div className="customers-container" id="customers">
+      <Head>
+        <title>Polly Miners Customers </title>
+        <meta name="description" content="Best Service in the market.Our customer says itself ." />
+      </Head>
       <p className="customer-subititle">
         OUR <span>HAPPY</span>
       </p>

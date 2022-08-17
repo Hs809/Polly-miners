@@ -1,9 +1,13 @@
 import Image from "next/image";
 import React from "react";
-import Link from "next/link";
+import Head from 'next/head'
 function Service() {
   return (
     <div className="service-container" id="service">
+      <Head>
+        <title>Mining Service</title>
+        <meta name="description" content="Polly Miners provides One Time Service, Full Year Service with setups" />
+      </Head>
       <div className="service-wrapper">
         <div className="service-info">
           <p>

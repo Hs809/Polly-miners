@@ -1,9 +1,14 @@
 import React from "react";
 import Link from 'next/link'
+import Head from 'next/head'
 
 function About() {
   return (
     <div className="about-container" id="about">
+      <Head>
+        <title>About Polly Miners</title>
+        <meta name="description" content="Polly miners gives best profits and best graphics card (GPU) prices from the market" />
+      </Head>
       <div className="about-wrapper">
         <div className="about-image-container">
           <div className="about-image1"></div>

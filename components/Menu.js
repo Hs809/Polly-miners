@@ -1,19 +1,32 @@
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import { Animate } from "react-simple-animate";
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 
 function Menu() {
   const [state, setState] = useState(false);
 
   return (
     <nav className="navbar-container">
-      {/* <img src="" alt="" className="logo" /> */}
+      <Head>
+        <title>Polly Miners</title>
+        <meta
+          name="description"
+          content="Polly miners build  Mining rig and Gaming PC's, We provide strong strategies and values to every customers."
+        />
+      </Head>
       <Link href="/" passHref>
         <a>
-          <Image className="logo" src="/Images/logo.png" priority alt="logo" width={120} height={70}   />
+          <Image
+            className="logo"
+            src="/Images/logo.png"
+            priority={true}
+            alt="logo"
+            width={120}
+            height={70}
+          />
         </a>
       </Link>
       <div className="bar-logo" onClick={() => setState(!state)}>
@@ -45,82 +58,23 @@ function Menu() {
         </ul>
       </div>
       <ul className="nav-links">
-        <Animate
-          play={true}
-          delay={0.3}
-          duration={0.8}
-          start={{ opacity: 0, transform: "translateY(-20px)" }}
-          end={{ opacity: 1, transform: "translateY(0px)" }}
-          easeType="cubic-bezier(0.445, 0.05, 0.55, 0.95)"
-        >
-          <li className="link">
-            <Link href="#hero">HOME</Link>
-          </li>
-        </Animate>
-        <Animate
-          play={true}
-          delay={0.5}
-          duration={0.8}
-          start={{ opacity: 0, transform: "translateY(-20px)" }}
-          end={{ opacity: 1, transform: "translateY(0px)" }}
-          easeType="cubic-bezier(0.445, 0.05, 0.55, 0.95)"
-        >
-          <li className="link">
-            <Link href="#about">ABOUT</Link>
-          </li>
-        </Animate>
-        {/* <Animate
-          play={true}
-          delay={0.7}
-          duration={0.8}
-          start={{ opacity: 0, transform: "translateY(-20px)" }}
-          end={{ opacity: 1, transform: "translateY(0px)" }}
-          easeType="cubic-bezier(0.445, 0.05, 0.55, 0.95)"
-        >
-          <li className="link">
-            <Link href="#">Best Gpu's</Link>
-          </li>
-        </Animate> */}
-        <Animate
-          play={true}
-          delay={0.9}
-          duration={0.8}
-          start={{ opacity: 0, transform: "translateY(-20px)" }}
-          end={{ opacity: 1, transform: "translateY(0px)" }}
-          easeType="cubic-bezier(0.445, 0.05, 0.55, 0.95)"
-        >
-          <li className="link">
-            <Link href="#service">SERVICES</Link>
-          </li>
-        </Animate>
-        <Animate
-          play={true}
-          delay={1.1}
-          duration={0.8}
-          start={{ opacity: 0, transform: "translateY(-20px)" }}
-          end={{ opacity: 1, transform: "translateY(0px)" }}
-          easeType="cubic-bezier(0.445, 0.05, 0.55, 0.95)"
-        >
-          <li className="link">
-            <Link href="#customers">
-              HAPPY CUSTOMERS
-            </Link>
-          </li>
-        </Animate>
-        <Animate
-          play={true}
-          delay={1.4}
-          duration={0.8}
-          start={{ opacity: 0, transform: "translateY(-20px)" }}
-          end={{ opacity: 1, transform: "translateY(0px)" }}
-          easeType="cubic-bezier(0.445, 0.05, 0.55, 0.95)"
-        >
-          <li className="link-btn">
-            <Link href="#contact">
-              <button className="contact-btn">CONTACT US</button>
-            </Link>
-          </li>
-        </Animate>
+        <li className="link">
+          <Link href="#hero">HOME</Link>
+        </li>
+        <li className="link">
+          <Link href="#about">ABOUT</Link>
+        </li>
+        <li className="link">
+          <Link href="#service">SERVICES</Link>
+        </li>
+        <li className="link">
+          <Link href="#customers">HAPPY CUSTOMERS</Link>
+        </li>
+        <li className="link-btn">
+          <Link href="#contact">
+            <button className="contact-btn">CONTACT US</button>
+          </Link>
+        </li>
       </ul>
     </nav>
   );

@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 const PUBLIC_KEY = "uMnA-Oe16rc5RzAwE";
 const SERVICE_ID = "service_w5s81km";
 const TEMPLATE_ID = "template_8cee97h";
-
+import Head from 'next/head'
 import Notify from "simple-notify";
 
 
@@ -90,6 +90,10 @@ function Contact() {
 
   return (
     <div className="contact-container" id="contact">
+      <Head>
+        <title>Polly Miners</title>
+        <meta name="description" content="Polly miners sells mining rig, gaming Pc, rig Services and all computer parts." />
+      </Head>
       <div className="contact-wrapper">
         <div className="contact-details">
           <div className="cimage-container"></div>
