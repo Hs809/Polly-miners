@@ -4,7 +4,11 @@ const nextConfig = {
   swcMinify: true,
   images:{
     domains: []
-  }
+  },
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
 }
 
 module.exports = nextConfig

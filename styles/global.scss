@@ -594,6 +594,9 @@ body {
       .footer-header {
         max-width: 300px;
         margin: auto;
+        .footer-logo{
+          margin-bottom: 2rem;
+        }
         .footer-btn {
           font-size: 18px;
           padding: 10px 2rem;
@@ -606,11 +609,11 @@ body {
           white-space: nowrap;
         }
       }
-      .quick-links,
-      .contact-links {
+      .links-container,
+      .links-container {
         margin: auto;
         margin-top: 2rem;
-        width: 250px;
+        width: 100%;
         color: $primary-color;
         h3 {
           font-size: 20px;
@@ -626,7 +629,7 @@ body {
           }
         }
       }
-      .contact-links {
+      .links-container {
         width: 300px;
         li {
           color: $primary-color;
@@ -738,8 +741,8 @@ body {
         grid-template-columns: 1fr;
         gap: 1rem;
         .footer-header,
-        .quick-links,
-        .contact-links {
+        .links-container,
+        .links-container {
           max-width: 100%;
           width: 100%;
           text-align: center;

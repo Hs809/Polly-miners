@@ -87,7 +87,7 @@ function Newsletter() {
               onChange={handleEmailChange}
               value={email}
             />
-            <button><AiOutlineMail /></button>
+            <button aria-label="send mail"><AiOutlineMail /></button>
           </form>
         </div>
       </div>
